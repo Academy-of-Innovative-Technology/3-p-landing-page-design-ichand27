@@ -5,192 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DeepSea Adventures</title>
 
-    <link href="https://fonts.googleapis.com" rel="stylesheet">
-    <style>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap" rel="stylesheet">
 
-        :root {
-            --color-primary: #006064;
-            --color-secondary: #FF6F61;
-            --color-accent: #00BCD4;
-            --color-highlight: #E0F7FA;
-            --color-text: #263238;
-            --color-background-start: #004D40;
-            --color-background-end: #006064;
-            --font-heading: 'Nautilus Pompilius', sans-serif;
-            --font-body: 'Atkinson Hyperlegible', sans-serif;
-        }
-
-
-        body {
-            font-family: var(--font-body);
-            color: var(--color-highlight);
-            background: linear-gradient(135deg, var(--color-background-start), var(--color-background-end));
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        h1, h2, h3 {
-            font-family: var(--font-heading);
-            color: var(--color-accent);
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-        }
-
-        p {
-            color: var(--color-highlight);
-        }
-
-        
-        .btn {
-            background-color: var(--color-secondary);
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            border-radius: 50px; 
-            cursor: pointer;
-            font-size: 1rem;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            box-shadow: 0 4px 10px rgba(255, 111, 97, 0.4);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn:hover {
-            background-color: #e65c51;
-            transform: translateY(-2px);
-        }
-
-        .btn:active::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 100px;
-            height: 100px;
-            background-color: rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            transform: scale(0);
-            animation: ripple 0.6s linear forwards;
-        }
-
-        @keyframes ripple {
-            to {
-                transform: scale(2.5);
-                opacity: 0;
-            }
-        }
-    
-        .card {
-            background: rgba(0, 96, 100, 0.3);
-            border-radius: 20px; 
-            padding: 30px;
-            margin-bottom: 20px;
-            backdrop-filter: blur(8px); 
-            border: 1px solid rgba(0, 188, 212, 0.2);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
-        }
-
-       
-        input, select, textarea {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid var(--color-accent);
-            padding: 10px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            color: var(--color-highlight);
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        input:focus, select:focus, textarea:focus {
-            outline: none;
-            border-color: var(--color-secondary);
-            background: rgba(255, 255, 255, 0.2);
-        }
-
-      
-        .hero-section {
-            padding: 100px 20px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-section::before {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 150px;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org" viewBox="0 0 1440 320"><path fill="%23004D40" fill-opacity="1" d="M0,192L80,192C160,192,320,192,480,170.7C640,149,800,107,960,106.7C1120,107,1280,149,1360,170.7L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>') no-repeat bottom center;
-            background-size: cover;
-            opacity: 0.5;
-            z-index: -1;
-        }
-    </style>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <header>
-        <div class="container">
-            <h1>DeepSea Adventures</h1>
-            <nav>
-             
-            </nav>
-        </div>
-    </header>
+<header>
+    <h1>DeepSea Adventures</h1>
+    <p class="tagline">
+        Luxury submarine tours revealing the mysteries of the ocean with comfort and safety.
+    </p>
+</header>
 
-    <main>
-        <section class="hero-section">
-            <div class="container">
-                <h2>Explore the Abyss in Unrivaled Luxury</h2>
-                <p>DeepSea Adventures reveals the mysteries of the ocean through luxury submarine tours, combining exploration with comfort and safety.</p>
-                <button class="btn">Book Your Expedition</button>
-            </div>
-        </section>
+<main>
 
-        <section class="container">
-            <h3>Key Features</h3>
-            <div class="card">
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Explore the Abyss in Unrivaled Luxury</h2>
+        <p>
+            Journey through underwater cities and marine habitats guided by experts.
+        </p>
+        <button class="btn">Book Your Expedition</button>
+
+        <!-- SVG Wave -->
+        <svg viewBox="0 0 1440 320" class="wave">
+            <path fill="#004D40"
+                d="M0,192L80,192C160,192,320,192,480,170.7C640,149,800,107,960,106.7C1120,107,1280,149,1360,170.7L1440,192L1440,320L0,320Z">
+            </path>
+        </svg>
+    </section>
+
+    <!-- Features Section -->
+    <section class="container">
+        <h3>Our Experiences</h3>
+
+        <div class="features">
+
+            <article class="card">
                 <h4>Tour Booking</h4>
-                <p>Reserve your voyage to underwater cities and pristine marine habitats. Our expeditions cater to exotic travel enthusiasts seeking the ultimate adventure.</p>
-                <form>
-                    <label for="date">Select Date:</label>
-                    <input type="date" id="date">
-                    <label for="habitat">Choose Habitat:</label>
-                    <select id="habitat">
-                        <option value="reef">Coral Reefs</option>
-                        <option value="trench">Deep Trenches</option>
-                    </select>
-                    <button type="submit" class="btn">Check Availability</button>
-                </form>
-            </div>
+                <p>
+                    Reserve exclusive submarine journeys designed for exotic travel enthusiasts.
+                </p>
+                <input type="date">
+                <select>
+                    <option>Coral Reefs</option>
+                    <option>Deep Sea Trenches</option>
+                </select>
+                <button class="btn">Check Availability</button>
+            </article>
 
-            <div class="card">
+            <article class="card">
                 <h4>Marine Life Guides</h4>
-                <p>Educational and fascinating guides accompany every dive, ensuring an environmentally conscious journey into the deep blue.</p>
-            </div>
+                <p>
+                    Educational guides explain marine ecosystems while promoting environmental responsibility.
+                </p>
+            </article>
 
-            <div class="card">
+            <article class="card">
                 <h4>Safety Protocols</h4>
-                <p>Your comfort and safety are paramount. We adhere to stringent international safety protocols for a secure yet exhilarating experience.</p>
-            </div>
-        </section>
-    </main>
+                <p>
+                    International safety standards and advanced technology ensure a secure experience.
+                </p>
+            </article>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 DeepSea Adventures. Mysterious, luxurious, and environmentally conscious exploration.</p>
         </div>
-    </footer>
+    </section>
+
+    <!-- Subscription Section -->
+    <section class="container">
+        <div class="card">
+            <h3>Subscribe for Ocean Updates</h3>
+            <p>
+                Stay informed about new expeditions and discoveries beneath the sea.
+            </p>
+            <input type="email" placeholder="Enter your email">
+            <button class="btn">Subscribe</button>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 DeepSea Adventures. Environmentally conscious exploration beneath the waves.</p>
+</footer>
 
 </body>
 </html>
